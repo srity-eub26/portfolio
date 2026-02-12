@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taznur Jahan | Portfolio</title>
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    scroll-behavior:smooth;
+}
+
+/* Navbar */
+nav{
+    position:fixed;
+    width:100%;
+    padding:15px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav h2{ color:#38bdf8; }
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+nav ul li a:hover{ color:#38bdf8; }
+
+/* Hero */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0 10%;
+}
+
+.hero-container{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero-img img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,0.6);
+}
+
+.hero-text h1{ font-size:40px; }
+.hero-text span{ color:#38bdf8; }
+
+.hero-text p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+.btn{
+    padding:10px 25px;
+    border:none;
+    background:#38bdf8;
+    color:#000;
+    font-weight:bold;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.btn:hover{ background:white; }
+
+/* Social Icons */
+.social-links{
+    margin-top:20px;
+    display:flex;
+    gap:15px;
+}
+
+.social-links a{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#1e293b;
+    color:#38bdf8;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.social-links a:hover{
+    background:#38bdf8;
+    color:#000;
+    transform:translateY(-5px);
+}
+
+/* Sections */
+section{ padding:80px 10%; }
+
+.section-title{
+    font-size:30px;
+    margin-bottom:30px;
+    border-left:5px solid #38bdf8;
+    padding-left:10px;
+}
+
+/* Skills */
+.skill{ margin-bottom:20px; }
+
+.progress{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress div{
+    height:10px;
+    background:#38bdf8;
+}
+
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+}
+
+.card:hover{ transform:translateY(-10px); }
+
+/* Contact */
+.contact input, .contact textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:5px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero-container{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>Taznur Jahan</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="hero-container">
+
+        <div class="hero-img">
+            <img src="picture/srity.jpeg" alt="Profile Picture">
+        </div>
+
+        <div class="hero-text">
+            <h1>Hi, I'm <span>Taznur Jahan</span></h1>
+            <p>I am a <span id="typing"></span></p>
+            <button class="btn">Download CV</button>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/srity" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:taznurjahan2003@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/01772669477" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+    </div>
+</section> 
+
+
+
+<!-- About -->
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        I am a passionate CSE student interested in Web Development,
+        Arduino, IoT, and AI-based smart systems.
+    </p>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skill"><p>HTML</p><div class="progress"><div style="width:90%"></div></div></div>
+    <div class="skill"><p>CSS</p><div class="progress"><div style="width:85%"></div></div></div>
+    <div class="skill"><p>JavaScript</p><div class="progress"><div style="width:75%"></div></div></div>
+    <div class="skill"><p>Arduino & IoT</p><div class="progress"><div style="width:70%"></div></div></div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+        <div class="card"><h3>AI Mental Health Companion</h3><p>AI emotional support assistant.</p></div>
+        <div class="card"><h3>Student Management System</h3><p>Database-based academic system.</p></div>
+        <div class="card"><h3>IoT Smart Home</h3><p>Arduino-based automation.</p></div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button class="btn">Send Message</button>
+    </div>
+</section>
+
+<footer>
+    © 2026 Taznur Jahan | All Rights Reserved
+</footer>
+
+<script>
+const textArray = ["CSE Student","Web Developer","Arduino Enthusiast","Problem Solver","Blockchain Developer"];
+let i=0,j=0,del=false;
+
+function typing(){
+    const el=document.getElementById("typing");
+    if(!del){
+        el.innerText=textArray[i].substring(0,j++);
+        if(j>textArray[i].length){ del=true; }
+    }else{
+        el.innerText=textArray[i].substring(0,j--);
+        if(j<0){ del=false; i=(i+1)%textArray.length; }
+    }
+    setTimeout(typing,120);
+}
+typing();
+</script>
+
+</body>
+</html>
